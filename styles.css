@@ -1,0 +1,137 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #807f7f;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    min-width: 500px;
+    padding: 2em;
+    border-radius: 2em;
+    background-color: #FFBDF7 ;
+    font-size: x-large;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+#top {
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    background-color: #FFBDF7;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+#inputs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    border: none;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    max-width: 100%;
+}
+
+#list {
+    position: sticky;
+    top: 200px;
+}
+
+.task {
+    color: black;
+    background-color: #D7BBF5;
+    border-radius: 10px;
+    height: auto;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow-wrap: anywhere;
+}
+
+img{
+    width: 50%;
+    margin: 50px auto 50px;
+    display: grid;
+    border-radius: 6px;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons i {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+}
+
+.buttons .eliminar {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+.buttons .completar {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.buttons i:hover {
+    background-color: #ffffff4e;
+    transition: background-color 0.5s;
+}
+
+.task.selected {
+    color: white;
+    background-color: #9376E0;
+}
+
+.task.selected .buttons .complete {
+    filter: hue-rotate(227deg);
+}
+
+.task > img {
+    height: 100%;
+}
+
+.task.selected > img {
+    opacity: 0.1;
+}
+
+#imageModal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000007f;
+    z-index: 2;
+    display: none;
+}
+
+#imageModal > img {
+    min-width: 90vmin;
+    max-height: 90vmin;
+}
+
+#imageModal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
